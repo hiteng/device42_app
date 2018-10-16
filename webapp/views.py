@@ -1,8 +1,9 @@
 
 
 from device42_app.webapp.app import device_app
+from flask import render_template
 
-device_app.route("/", methods=["GET"])
+@device_app.route("/", methods=["GET"])
 def home():
 
-    return "Welcome to device42"
+    return render_template("inventory.html")
